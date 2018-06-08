@@ -1,0 +1,360 @@
+@import "colors"
+
+html
+  padding: 0
+  font-family: 'Comfortaa', cursive
+  margin: 0
+
+.main
+  padding: 0
+
+.header
+  border-bottom: 1px solid $border-color
+  .row
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    height: 92px
+    .col-md-auto
+      padding: 0
+    .top-nav-menu
+      margin-bottom: 0
+      display: flex
+      justify-content: space-between
+
+      li
+        list-style-type: none
+        margin-right: 15px
+        a
+          font-family: 'Comfortaa', cursive
+          text-decoration: none
+          color: #6a6a6a
+          font-size: 16px
+          letter-spacing: 0.74px
+        a:hover
+          text-decoration: none
+    .basket-block
+      width: 250px
+      height: 51px
+      border-radius: 5px
+      border: 2px solid $active
+      display: flex
+      justify-content: space-around
+      align-items: center
+      p
+        margin-bottom: 0
+        color: $active
+
+.products_section
+  background-color: $body-bg
+  width: 100%
+  .container
+    width: 100%
+  .products
+    margin-top: 33px
+    margin-bottom: 40px
+    .product
+      margin-bottom: 20px
+      padding-top: 70px
+      transition: all 0.3s ease-in-out
+      .product_info
+        margin-left: 56px
+        width: 273px
+        color: white
+        h3
+          font-family: "Comfortaa", cursive
+          font-size: 34px
+          font-weight: 700
+          letter-spacing: 1.58px
+        p
+          a
+            font-family: "Comfortaa", cursive
+            font-size: 14px
+            letter-spacing: .65px
+            font-weight: 700
+            color: white
+            text-decoration: none
+        p::after
+          content: ''
+          display: block
+          width: 54px
+          height: 3px
+          background-color: white
+          transform: translate(95px, -12px)
+        .btn
+          width: 165px
+          height: 53px
+          border-radius: 5px
+          font-family: "Comfortaa", cursive
+          font-size: 18px
+          font-weight: 700
+          letter-spacing: .74px
+          color: $active
+          text-align: center
+
+    .product:hover
+      box-shadow: 1px 1px #53ea93,2px 2px #53ea93,3px 3px #53ea93,4px 4px #53ea93,5px 5px #53ea93,6px 6px #53ea93,7px 7px #53ea93
+      -webkit-transform: translateX(-7px)
+      transform: translateX(-7px)
+    .organiser
+      background-image: url("../img/org.png")
+      height: 366px
+      width: 100%
+    .furniture
+      background-image: url("../img/furniture.png")
+      height: 442px
+      width: 100%
+    .video
+      border: 1px solid $active
+      height: 484px
+    .textile
+      background-image: url("../img/textile.png")
+      height: 322px
+      width: 100%
+      opacity: 0.82
+.about_us_section
+  width: 100%
+  &_header
+    h2
+      font-family: "Comfortaa", cursive
+      font-size: 38px
+      letter-spacing: 1.76px
+      color: #4e4e4e
+      &::after
+        display: block
+        content: ''
+        width: 245px
+        height: 2px
+        background-color: $active
+        transform: translate(170%, -10px)
+  &_body
+    margin-top: 35px
+    padding: 0
+    &_item:nth-child(2n+1)
+      background-color: $body-bg
+    &_item
+      width: 100%
+      padding-top: 22px
+      padding-bottom: 42px
+      &_header
+        margin-bottom: 30px
+        display: flex
+        align-items: center
+        h4
+          margin-bottom: 0
+          margin-left: 20px
+          color: $active
+          font-family: "Comfortaa", cursive
+          font-size: 24px
+          font-weight: 700
+          letter-spacing: 1.1px
+      &_body
+        p
+          color: #8a8a8a
+          font-family: "Comfortaa", cursive
+          font-size: 18px
+          letter-spacing: .72px
+.instagram_section
+  margin-top: 40px
+  margin-bottom: 80px
+  font-family: "Comfortaa", cursive
+  &_header
+    margin-bottom: 40px
+    display: flex
+    justify-content: space-between
+    .left
+      h2
+        color: #4e4e4e
+        font-size: 38px
+        letter-spacing: 1.76px
+      h2::after
+        display: block
+        content: ''
+        width: 245px
+        height: 2px
+        background-color: $active
+        transform: translate(140%, -10px)
+      a
+        color: $active
+        font-size: 30px
+        letter-spacing: 1.39px
+    .right
+      a
+        font-size: 18px
+        letter-spacing: 1.34px
+        color: $active
+  &_body
+    width: 100%
+    margin-top: 20px
+    .container
+      display: flex
+      justify-content: space-between
+      padding: 0
+    &_item
+      width: 24%
+      padding: 0
+      position: relative
+      margin-bottom: 15px
+      .image
+        img
+          width: 100%
+      .info
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        padding: 20px
+        background-color: rgba(108, 186, 165, 0.77)
+        opacity: 0
+        text-decoration: none
+        color: #ffffff
+        transition: all 0.3s ease-in-out
+        &_wrap
+          border: 1px solid #ffffff
+          height: 100%
+          width: 100%
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          font-size: 17px
+          .info_header
+            display: flex
+            width: 60%
+            justify-content: space-around
+          .info_body
+            text-align: center
+          .info_footer
+            text-decoration: underline
+            font-size: 21px
+            font-weight: 700
+    &_item:hover
+      .info
+        opacity: 0.95
+
+.contact_section
+  padding: 0
+  .contact_section_header
+    font-family: "Comfortaa", cursive
+    padding-top: 40px
+    background-color: $body-bg
+    .container
+      padding: 0
+      display: flex
+      flex-direction: column
+      align-items: center
+    &_main
+      display: flex
+      width: 100%
+      justify-content: space-between
+      align-items: center
+      .left,.right
+        border-bottom: 2px solid $active
+        height: 2px
+        width: 25%
+      h2
+        margin: auto 25px 30px 25px
+        color: #4e4e4e
+        font-size: 38px
+        letter-spacing: 1.76px
+    &_info
+      margin-top: 40px
+      margin-bottom: 20px
+      display: flex
+      flex-direction: column
+      align-items: center
+      .phone, .email, .social
+        display: flex
+      .text
+        color: $active
+        margin-right: 10px
+      p
+        font-size: 24px
+        letter-spacing: 1.11px
+      .social
+        margin-top: 20px
+        a
+          margin-left: 15px
+          width: 60px
+          height: 60px
+          border-radius: 50%
+          background-color: $active
+          display: flex
+          justify-content: center
+          align-items: center
+          text-decoration: none
+          transition: all 0.5s ease-in
+          i
+            color: #ffffff
+            font-size: 34px
+            transition: all 0.5s ease-in-out
+        a:hover
+          background-color: #ffffff
+          i
+            color: $active
+            font-size: 42px
+  .contact_section_body
+    display: flex
+    justify-content: center
+    .form_container
+      padding: 0
+      margin: 0
+      display: flex
+      justify-content: center
+      form
+        font-family: "Comfortaa", cursive
+        margin-top: 80px
+        width: 100%
+        margin-bottom: 80px
+        .user_info
+          width: 100%
+          display: flex
+          justify-content: space-between
+          margin-bottom: 30px
+          .input-group
+            width: 33%
+            margin: 10px
+          .form-control
+            border: none
+            font-size: 21px
+            border-bottom: 1px solid #c4c4c4
+          .form-control:focus
+            outline: none
+            box-shadow: none
+            color: $active
+            border-bottom-color: $active
+        .user_msg
+          display: flex
+          flex-direction: column
+          padding: 5px
+          lable
+            color: #7b7b7b
+            font-size: 21px
+            padding-left: 20px
+          .message
+            border: none
+            border-bottom: 1px solid #c4c4c4
+            border-top: 1px solid #c4c4c4
+            font-size: 21px
+          .message:focus
+            outline: none
+            box-shadow: none
+            color: $active
+
+
+
+.footer
+  background-color: $active
+  padding-top: 40px
+  font-family: "Comfortaa", cursive
+  .container
+    padding-top: 20px
+    border-top: 1px solid #7b7b7b
+    display: flex
+    justify-content: space-between
+    a
+      color: inherit
+      text-decoration: none
+
