@@ -17,69 +17,98 @@
     <title>Cleverbox</title>
 </head>
 <body>
+
+    <div  id="top" class="header container-fluid">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg  ">
+                <a class="navbar-brand " href="#">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">Down</span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-1  top-nav-menu">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Мебель </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Органайзеры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Текстиль</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Почему мы?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Отзывы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="my-2 my-lg-0 basket-block">
+                        <p class="item">1 товар - 1500,00 грн</p>
+                        <img src="img/shopping-bag.png" alt="" class="basket-img">
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
     <div class="container-fluid main">
-        <div class="header">
+
+        <div class="container-fluid products_section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-auto">
-                        <img src="img/logo.png" alt="logo">
-                    </div>
-                    <div class="col-md-auto">
-                        <ul class="top-nav-menu">
-                            <li><a href="#">Мебель</a></li>
-                            <li><a href="#">Органайзеры</a></li>
-                            <li><a href="#">Текстиль</a></li>
-                            <li><a href="#">Почему мы?</a></li>
-                            <li><a href="#">Отзывы</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-auto">
-                        <div class="basket-block">
-                            <p class="item">1 товар - 1500,00 грн</p>
-                            <img src="img/shopping-bag.png" alt="" class="basket-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid products_section">
-            <div class="container ">
-                <div class="products">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <div class="product organiser">
-                                <div class="product_info">
-                                    <h3>Органайзеры</h3>
-                                    <p class="page"><a href="#">Страница</a></p>
-                                    <a href="#" class="btn btn-light">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="product furniture">
-                                <div class="product_info">
-                                    <h3>Мебель</h3>
-                                    <p class="page"><a href="#">Страница</a></p>
-                                    <a href="#" class="btn btn-light">Подробнее</a>
-                                </div>
+                    <div class="col-md-6 col-12">
+                        <div class="product">
+                            <a href="#"><img src="img/org.png" alt=""></a>
+                            <div class="product_info">
+                                <h3>Органайзеры</h3>
+                                <p>Страница</p>
+                                <a href="#" class="btn d-flex align-items-center justify-content-center">Подробнее</a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-12">
-                            <div class="product video">
-                                <div class="product_info">
-                                    <h3>Обзор нашей продукции</h3>
-                                    <p class="page">Видео</p>
-                                </div>
+                        <div class="product">
+                            <a href="#"><img src="img/furniture.png" alt=""></a>
+
+                            <div class="product_info">
+                                <h3>Мебель</h3>
+                                <p>Страница</p>
+                                <a href="#" class="btn d-flex align-items-center justify-content-center">Подробнее</a>
                             </div>
-                            <div class="product textile">
-                                <div class="product_info">
-                                    <h3>Текстиль</h3>
-                                    <p class="page"><a href="#">Страница</a></p>
-                                    <a href="#" class="btn btn-light">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="product product_video" style="height: 354px">
+                            <img src="img/furniture.png" alt="">
+                            <div class="product_info product_video_info">
+                                <h3>Обзор нашей продукции</h3>
+                                <p>Видео</p>
+                                <div class="btn_container d-flex align-items-center justify-content-center">
+                                    <button type="button" class="btn play_video" data-toggle="modal" data-target="#videoModal">
+                                        <i class="fas fa-play"></i>
+                                    </button>
                                 </div>
+
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="#">
+                                <img src="img/textile.png" alt="">
+                            </a>
+                            <div class="product_info">
+                                <h3>Текстиль</h3>
+                                <p>Страница</p>
+                                <a href="#" class="btn d-flex align-items-center justify-content-center" >Подробнее</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         <div class="about_us_section">
@@ -184,21 +213,22 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
-        <!--<div class="video_section">
-            <div class="video_section_header">
+        <div class="video_section">
+            <div class="video_section_header container">
                 <div class="container">
                     <h2>Название видео</h2>
                 </div>
             </div>
-            <div class="video_section_body">
+            <div class="video_section_body container">
                 <div class="video">
+                    <iframe  src="https://www.youtube.com/embed/JkIPgaIXDFs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
                 </div>
             </div>
-        </div>-->
+        </div>
         <div class="instagram_section container-fluid">
             <div class="instagram_section_header container">
                 <div class="left">
@@ -435,18 +465,46 @@
                             <lable for="msg">Сообщение:</lable>
                             <textarea name="msg" id="msg" class="message" ></textarea>
                         </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <button class="btn form_submit" type="submit">Отправить</button>
+                        </div>
+
                     </form>
+
+                </div>
+            </div>
+            <div class="container toTopContainer">
+                <a href="#top" class="toTop">
+                    <img src="img/button-.png" alt="">
+                </a>
+            </div>
+
+        </div>
+
+        <div class="modal fade container" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <iframe  src="https://www.youtube.com/embed/JkIPgaIXDFs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
     <div class="container-fluid footer">
         <div class="container">
-            <p>Cleverbox. &copy</p>
+            <p><a href="#">Cleverbox. &copy</a></p>
             <p> <a href="#">Разработка сайта Delfin Studio. &copy</a>  </p>
         </div>
     </div>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script></body>
+
+    <script src="script/jquery.malihu.PageScroll2id.js"></script>
+    <script src="script/script.js"></script>
+
+
 </html>

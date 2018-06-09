@@ -8,106 +8,103 @@ html {
 
 .header {
   border-bottom: 1px solid #b6b4b6; }
-  .header .row {
+  .header .container {
+    padding: 0; }
+  .header .top-nav-menu {
+    margin-bottom: 0;
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    height: 92px; }
-    .header .row .col-md-auto {
-      padding: 0; }
-    .header .row .top-nav-menu {
+    justify-content: space-between; }
+    .header .top-nav-menu li {
+      list-style-type: none;
+      margin-right: 15px; }
+      .header .top-nav-menu li a {
+        font-family: "Comfortaa", cursive;
+        text-decoration: none;
+        color: #6a6a6a;
+        font-size: 16px;
+        letter-spacing: 0.74px; }
+  .header .basket-block {
+    width: 210px;
+    height: 51px;
+    border-radius: 5px;
+    border: 2px solid #5ed2b3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .header .basket-block p {
       margin-bottom: 0;
-      display: flex;
-      justify-content: space-between; }
-      .header .row .top-nav-menu li {
-        list-style-type: none;
-        margin-right: 15px; }
-        .header .row .top-nav-menu li a {
-          font-family: "Comfortaa", cursive;
-          text-decoration: none;
-          color: #6a6a6a;
-          font-size: 16px;
-          letter-spacing: 0.74px; }
-        .header .row .top-nav-menu li a:hover {
-          text-decoration: none; }
-    .header .row .basket-block {
-      width: 250px;
-      height: 51px;
-      border-radius: 5px;
-      border: 2px solid #5ed2b3;
-      display: flex;
-      justify-content: space-around;
-      align-items: center; }
-      .header .row .basket-block p {
-        margin-bottom: 0;
-        color: #5ed2b3; }
+      color: #5ed2b3;
+      font-size: 16px; }
 
 .products_section {
+  font-family: "Comfortaa", cursive;
+  margin-top: 40px;
   background-color: #f9f9f9;
-  width: 100%; }
-  .products_section .container {
-    width: 100%; }
-  .products_section .products {
-    margin-top: 33px;
-    margin-bottom: 40px; }
-    .products_section .products .product {
-      margin-bottom: 20px;
-      padding-top: 70px;
-      transition: all 0.3s ease-in-out; }
-      .products_section .products .product .product_info {
-        margin-left: 56px;
-        width: 273px;
-        color: white; }
-        .products_section .products .product .product_info h3 {
-          font-family: "Comfortaa", cursive;
-          font-size: 34px;
-          font-weight: 700;
-          letter-spacing: 1.58px; }
-        .products_section .products .product .product_info p a {
-          font-family: "Comfortaa", cursive;
-          font-size: 14px;
-          letter-spacing: 0.65px;
-          font-weight: 700;
-          color: white;
-          text-decoration: none; }
-        .products_section .products .product .product_info p::after {
-          content: "";
-          display: block;
-          width: 54px;
-          height: 3px;
-          background-color: white;
-          transform: translate(95px, -12px); }
-        .products_section .products .product .product_info .btn {
-          width: 165px;
-          height: 53px;
-          border-radius: 5px;
-          font-family: "Comfortaa", cursive;
-          font-size: 18px;
-          font-weight: 700;
-          letter-spacing: 0.74px;
-          color: #5ed2b3;
-          text-align: center; }
-    .products_section .products .product:hover {
-      box-shadow: 1px 1px #53ea93, 2px 2px #53ea93, 3px 3px #53ea93, 4px 4px #53ea93, 5px 5px #53ea93, 6px 6px #53ea93, 7px 7px #53ea93;
-      -webkit-transform: translateX(-7px);
-      transform: translateX(-7px); }
-    .products_section .products .organiser {
-      background-image: url("../img/org.png");
-      height: 366px;
+  margin-bottom: 80px; }
+  .products_section .product {
+    margin: 15px;
+    position: relative;
+    transition: all 0.3s ease-in-out; }
+    .products_section .product img {
       width: 100%; }
-    .products_section .products .furniture {
-      background-image: url("../img/furniture.png");
-      height: 442px;
-      width: 100%; }
-    .products_section .products .video {
-      border: 1px solid #5ed2b3;
-      height: 484px; }
-    .products_section .products .textile {
-      background-image: url("../img/textile.png");
-      height: 322px;
+    .products_section .product .product_info {
       width: 100%;
-      opacity: 0.82; }
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding-top: 10%;
+      padding-left: 8%;
+      transition: all 0.3s ease-in-out; }
+      .products_section .product .product_info h3 {
+        font-size: 34px;
+        letter-spacing: 1.58px;
+        font-weight: 700;
+        color: #ffffff; }
+      .products_section .product .product_info p {
+        font-family: "Comfortaa", cursive;
+        color: #ffffff;
+        letter-spacing: 0.65px;
+        font-size: 17px; }
+      .products_section .product .product_info a {
+        background-color: #ffffff;
+        width: 165px;
+        height: 53px;
+        color: #5ed2b3;
+        font-size: 18px;
+        letter-spacing: 0.74px;
+        font-weight: 700;
+        box-shadow: none;
+        outline: none;
+        transition: all 0.3s ease-in-out; }
+        .products_section .product .product_info a:hover {
+          transform: scale(1.1, 1.1);
+          font-size: 20px; }
+    .products_section .product .product_video_info {
+      position: absolute; }
+      .products_section .product .product_video_info .btn_container {
+        position: absolute;
+        top: 50%;
+        right: 58%; }
+        .products_section .product .product_video_info .btn_container button {
+          width: 93px;
+          height: 93px;
+          border-radius: 50%;
+          background-color: #ffffff;
+          color: #5ed2b3;
+          transition: all 0.3s ease-in-out;
+          opacity: 0;
+          font-size: 22px;
+          box-shadow: none; }
+    .products_section .product .product_video_info:hover {
+      background-color: rgba(94, 210, 179, 0.7); }
+      .products_section .product .product_video_info:hover button {
+        opacity: 1;
+        font-size: 32px; }
+  .products_section .product:hover {
+    box-shadow: 1px 1px #53ea93, 2px 2px #53ea93, 3px 3px #53ea93, 4px 4px #53ea93, 5px 5px #53ea93, 6px 6px #53ea93, 7px 7px #53ea93;
+    -webkit-transform: translateX(-7px);
+    transform: translateX(-7px); }
 
 .about_us_section {
   width: 100%; }
@@ -150,8 +147,24 @@ html {
         font-size: 18px;
         letter-spacing: 0.72px; }
 
+.video_section {
+  background-color: #f9f9f9;
+  font-family: "Comfortaa", cursive; }
+  .video_section_header {
+    padding-top: 40px;
+    margin-bottom: 60px; }
+    .video_section_header h2 {
+      font-size: 38px;
+      color: #4e4e4e;
+      letter-spacing: 1.76px; }
+  .video_section_body {
+    margin-top: 80px; }
+    .video_section_body iframe {
+      width: 100%;
+      height: 485px; }
+
 .instagram_section {
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 80px;
   font-family: "Comfortaa", cursive; }
   .instagram_section_header {
@@ -333,6 +346,50 @@ html {
             outline: none;
             box-shadow: none;
             color: #5ed2b3; }
+        .contact_section .contact_section_body .form_container form .form_submit {
+          width: 308px;
+          height: 45px;
+          background-color: #5ed2b3;
+          color: #ffffff;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 0.74px;
+          transition: all 0.3s ease-in-out; }
+        .contact_section .contact_section_body .form_container form .form_submit:hover {
+          transform: scale(1.2, 1.2);
+          font-size: 22px; }
+  .contact_section .toTopContainer {
+    position: relative; }
+    .contact_section .toTopContainer .toTop {
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      transition: all 0.2s ease-in-out; }
+    .contact_section .toTopContainer .toTop:hover {
+      bottom: 30px;
+      transform: scale(1.2, 1.2); }
+
+#videoModal {
+  font-family: "Comfortaa", cursive; }
+  #videoModal .modal-dialog {
+    margin-right: 0;
+    margin-left: 0; }
+  #videoModal .modal-content {
+    position: relative;
+    min-width: 900px;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0); }
+    #videoModal .modal-content iframe {
+      width: 100%;
+      height: 550px; }
+    #videoModal .modal-content .close {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      right: -10%;
+      top: 0;
+      font-size: 80px;
+      color: #5ed2b3; }
 
 .footer {
   background-color: #5ed2b3;

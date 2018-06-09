@@ -4,115 +4,108 @@ html
   padding: 0
   font-family: 'Comfortaa', cursive
   margin: 0
-
 .main
   padding: 0
 
 .header
   border-bottom: 1px solid $border-color
-  .row
+  .container
+    padding: 0
+  .top-nav-menu
+    margin-bottom: 0
     display: flex
-    width: 100%
     justify-content: space-between
+    li
+      list-style-type: none
+      margin-right: 15px
+      a
+        font-family: 'Comfortaa', cursive
+        text-decoration: none
+        color: #6a6a6a
+        font-size: 16px
+        letter-spacing: 0.74px
+  .basket-block
+    width: 210px
+    height: 51px
+    border-radius: 5px
+    border: 2px solid $active
+    display: flex
+    justify-content: space-around
     align-items: center
-    height: 92px
-    .col-md-auto
-      padding: 0
-    .top-nav-menu
+    p
       margin-bottom: 0
-      display: flex
-      justify-content: space-between
-
-      li
-        list-style-type: none
-        margin-right: 15px
-        a
-          font-family: 'Comfortaa', cursive
-          text-decoration: none
-          color: #6a6a6a
-          font-size: 16px
-          letter-spacing: 0.74px
-        a:hover
-          text-decoration: none
-    .basket-block
-      width: 250px
-      height: 51px
-      border-radius: 5px
-      border: 2px solid $active
-      display: flex
-      justify-content: space-around
-      align-items: center
-      p
-        margin-bottom: 0
-        color: $active
+      color: $active
+      font-size: 16px
 
 .products_section
+  font-family: "Comfortaa", cursive
+  margin-top: 40px
   background-color: $body-bg
-  width: 100%
-  .container
-    width: 100%
-  .products
-    margin-top: 33px
-    margin-bottom: 40px
-    .product
-      margin-bottom: 20px
-      padding-top: 70px
-      transition: all 0.3s ease-in-out
-      .product_info
-        margin-left: 56px
-        width: 273px
-        color: white
-        h3
-          font-family: "Comfortaa", cursive
-          font-size: 34px
-          font-weight: 700
-          letter-spacing: 1.58px
-        p
-          a
-            font-family: "Comfortaa", cursive
-            font-size: 14px
-            letter-spacing: .65px
-            font-weight: 700
-            color: white
-            text-decoration: none
-        p::after
-          content: ''
-          display: block
-          width: 54px
-          height: 3px
-          background-color: white
-          transform: translate(95px, -12px)
-        .btn
-          width: 165px
-          height: 53px
-          border-radius: 5px
-          font-family: "Comfortaa", cursive
-          font-size: 18px
-          font-weight: 700
-          letter-spacing: .74px
+  margin-bottom: 80px
+  .product
+    margin: 15px
+    position: relative
+    transition: all 0.3s ease-in-out
+    img
+      width: 100%
+    .product_info
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      padding-top: 10%
+      padding-left: 8%
+      transition: all .3s ease-in-out
+      h3
+        font-size: 34px
+        letter-spacing: 1.58px
+        font-weight: 700
+        color: #ffffff
+      p
+        font-family: "Comfortaa", cursive
+        color: #ffffff
+        letter-spacing: .65px
+        font-size: 17px
+      a
+        background-color: #ffffff
+        width: 165px
+        height: 53px
+        color: $active
+        font-size: 18px
+        letter-spacing: .74px
+        font-weight: 700
+        box-shadow: none
+        outline: none
+        transition: all .3s ease-in-out
+        &:hover
+          transform: scale(1.1, 1.1)
+          font-size: 20px
+    .product_video_info
+      position: absolute
+      .btn_container
+        position: absolute
+        top: 50%
+        right: 58%
+        button
+          width: 93px
+          height: 93px
+          border-radius: 50%
+          background-color: #ffffff
           color: $active
-          text-align: center
-
-    .product:hover
-      box-shadow: 1px 1px #53ea93,2px 2px #53ea93,3px 3px #53ea93,4px 4px #53ea93,5px 5px #53ea93,6px 6px #53ea93,7px 7px #53ea93
-      -webkit-transform: translateX(-7px)
-      transform: translateX(-7px)
-    .organiser
-      background-image: url("../img/org.png")
-      height: 366px
-      width: 100%
-    .furniture
-      background-image: url("../img/furniture.png")
-      height: 442px
-      width: 100%
-    .video
-      border: 1px solid $active
-      height: 484px
-    .textile
-      background-image: url("../img/textile.png")
-      height: 322px
-      width: 100%
-      opacity: 0.82
+          transition: all 0.3s ease-in-out
+          opacity: 0
+          font-size: 22px
+          box-shadow: none
+    .product_video_info:hover
+      background-color: rgba(94, 210, 179, 0.7)
+      button
+        opacity: 1
+        font-size: 32px
+  .product:hover
+    box-shadow: 1px 1px #53ea93,2px 2px #53ea93,3px 3px #53ea93,4px 4px #53ea93,5px 5px #53ea93,6px 6px #53ea93,7px 7px #53ea93
+    -webkit-transform: translateX(-7px)
+    transform: translateX(-7px)
 .about_us_section
   width: 100%
   &_header
@@ -155,8 +148,23 @@ html
           font-family: "Comfortaa", cursive
           font-size: 18px
           letter-spacing: .72px
+.video_section
+  background-color: $body-bg
+  font-family: "Comfortaa", cursive
+  &_header
+    padding-top: 40px
+    margin-bottom: 60px
+    h2
+      font-size: 38px
+      color: #4e4e4e
+      letter-spacing: 1.76px
+  &_body
+    margin-top: 80px
+    iframe
+      width: 100%
+      height: 485px
 .instagram_section
-  margin-top: 40px
+  margin-top: 80px
   margin-bottom: 80px
   font-family: "Comfortaa", cursive
   &_header
@@ -342,8 +350,51 @@ html
             outline: none
             box-shadow: none
             color: $active
+        .form_submit
+          width: 308px
+          height: 45px
+          background-color: $active
+          color: #ffffff
+          font-size: 18px
+          font-weight: 700
+          letter-spacing: 0.74px
+          transition: all 0.3s ease-in-out
+        .form_submit:hover
+          transform: scale(1.2, 1.2)
+          font-size: 22px
 
+  .toTopContainer
+    position: relative
+    .toTop
+      position: absolute
+      bottom: 20px
+      right: 0
+      transition: all .2s ease-in-out
+    .toTop:hover
+      bottom: 30px
+      transform: scale(1.2, 1.2)
 
+#videoModal
+  font-family: "Comfortaa", cursive
+  .modal-dialog
+    margin-right: 0
+    margin-left: 0
+  .modal-content
+    position: relative
+    min-width: 900px
+    max-width: 1000px
+    background-color: rgba(255, 255,255, 0)
+    iframe
+      width: 100%
+      height: 550px
+    .close
+      width: 60px
+      height: 60px
+      position: absolute
+      right: -10%
+      top: 0
+      font-size: 80px
+      color: $active
 
 .footer
   background-color: $active
