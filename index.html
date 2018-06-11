@@ -20,16 +20,19 @@
 
     <div  id="top" class="header container-fluid">
         <div class="container">
-            <nav class="navbar navbar-expand-lg  ">
-                <a class="navbar-brand " href="#">
+            <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="#">
                     <img src="img/logo.png" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">Down</span>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="navbar-toggler-icon">
+                        <span class="toggler-icon first"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </div>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-1  top-nav-menu">
+                    <ul class="navbar-nav   mt-lg-0  top-nav-menu">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Мебель </a>
                         </li>
@@ -49,11 +52,15 @@
                             <a class="nav-link " href="#">Контакты</a>
                         </li>
                     </ul>
-                    <div class="my-2 my-lg-0 basket-block">
-                        <p class="item">1 товар - 1500,00 грн</p>
+                    <div class="my-2 my-lg-0 basket-block mr-0">
+
+                        <div class="item">
+                            <p class="count">1 товар <span> - </span></p>
+
+                            <p class="price">500,00 грн</p>
+                        </div>
                         <img src="img/shopping-bag.png" alt="" class="basket-img">
                     </div>
-
                 </div>
             </nav>
         </div>
@@ -62,34 +69,41 @@
 
         <div class="container-fluid products_section">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-12">
+                <div class="row d-flex justify-content-around">
+                    <div class="product_wrap col-md-5 col-12 ">
                         <div class="product">
-                            <a href="#"><img src="img/org.png" alt=""></a>
+                            <div class="background"></div>
+                            <img class="desktop_img" src="img/org.png" alt="">
+                            <img src="img/dsc-1047.png" alt="" class="mobile_img">
                             <div class="product_info">
                                 <h3>Органайзеры</h3>
-                                <p>Страница</p>
+                                <p  class="desktop_p">Страница</p>
+                                <p class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, sunt!</p>
                                 <a href="#" class="btn d-flex align-items-center justify-content-center">Подробнее</a>
                             </div>
                         </div>
                         <div class="product">
-                            <a href="#"><img src="img/furniture.png" alt=""></a>
+                            <div class="background"></div>
+                            <img class="desktop_img" src="img/furniture.png" alt="">
+                            <img src="img/dsc-1062.png" alt="" class="mobile_img">
 
                             <div class="product_info">
                                 <h3>Мебель</h3>
-                                <p>Страница</p>
+                                <p class="desktop_p">Страница</p>
+                                <p class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a href="#" class="btn d-flex align-items-center justify-content-center">Подробнее</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-12">
-                        <div class="product product_video" style="height: 354px">
-                            <img src="img/furniture.png" alt="">
+                    <div class="product_wrap  col-md-5 col-12">
+                        <div class="product product_video" >
+                            <img class="desktop_img" src="img/733x484.png" alt="">
+                            <img src="" alt="" class="mobile_img">
                             <div class="product_info product_video_info">
                                 <h3>Обзор нашей продукции</h3>
                                 <p>Видео</p>
                                 <div class="btn_container d-flex align-items-center justify-content-center">
-                                    <button type="button" class="btn play_video" data-toggle="modal" data-target="#videoModal">
+                                    <button type="button" class="btn play_video" data-toggle="modal" data-target="#small_video">
                                         <i class="fas fa-play"></i>
                                     </button>
                                 </div>
@@ -97,12 +111,16 @@
                             </div>
                         </div>
                         <div class="product">
+                            <div class="background"></div>
                             <a href="#">
-                                <img src="img/textile.png" alt="">
+                                <img src="img/textile.png" alt="" class="desktop_img">
+                                <img src="img/dsc-1135.png" alt="" class="mobile_img">
                             </a>
                             <div class="product_info">
+
                                 <h3>Текстиль</h3>
-                                <p>Страница</p>
+                                <p class="desktop_p">Страница</p>
+                                <p class="about">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                                 <a href="#" class="btn d-flex align-items-center justify-content-center" >Подробнее</a>
                             </div>
                         </div>
@@ -223,10 +241,18 @@
                 </div>
             </div>
             <div class="video_section_body container">
-                <div class="video">
-                    <iframe  src="https://www.youtube.com/embed/JkIPgaIXDFs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+                <img src="img/dsc-0855.png" alt="">
+                <div class="info_block">
+                        <p>Наша продукция</p>
+                        <h4>Название видео</h4>
+                        <a href="#">Видео</a>
                 </div>
+                <div class="play_block">
+                    <button type="button" class="btn play_video" data-toggle="modal" data-target="#big_video">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+
             </div>
         </div>
         <div class="instagram_section container-fluid">
@@ -254,12 +280,12 @@
                         <a href="#" class="info">
                             <div class="info_wrap">
                                 <div class="info_header">
-                                    <p><i class="far fa-heart"></i>1066</p>
-                                    <p><i class="far fa-comment"></i>80</p>
+                                    <p class="likes"><i class="far fa-heart"></i>1066</p>
+                                    <p class="comments"><i class="far fa-comment"></i>80</p>
                                 </div>
                                 <div class="info_body">
                                     <p>
-                                        Повседневная практика показывает, что дальнейшее развитие различных форм...
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo itaque iusto minima odit praesentium, quibusdam sint vitae! Et, reiciendis?
                                     </p>
                                 </div>
                                 <div class="info_footer">
@@ -275,12 +301,12 @@
                         <a href="#" class="info">
                             <div class="info_wrap">
                                 <div class="info_header">
-                                    <p><i class="far fa-heart"></i>1066</p>
-                                    <p><i class="far fa-comment"></i>80</p>
+                                    <p class="likes"><i class="far fa-heart"></i>1066</p>
+                                    <p class="comments"><i class="far fa-comment"></i>80</p>
                                 </div>
                                 <div class="info_body">
                                     <p>
-                                        Повседневная практика показывает, что дальнейшее развитие различных форм...
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo itaque iusto minima odit praesentium, quibusdam sint vitae! Et, reiciendis?
                                     </p>
                                 </div>
                                 <div class="info_footer">
@@ -296,12 +322,12 @@
                         <a href="#" class="info">
                             <div class="info_wrap">
                                 <div class="info_header">
-                                    <p><i class="far fa-heart"></i>1066</p>
-                                    <p><i class="far fa-comment"></i>80</p>
+                                    <p class="likes"><i class="far fa-heart"></i>1066</p>
+                                    <p class="comments"><i class="far fa-comment"></i>80</p>
                                 </div>
                                 <div class="info_body">
                                     <p>
-                                        Повседневная практика показывает, что дальнейшее развитие различных форм...
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo itaque iusto minima odit praesentium, quibusdam sint vitae! Et, reiciendis?
                                     </p>
                                 </div>
                                 <div class="info_footer">
@@ -317,12 +343,12 @@
                         <a href="#" class="info">
                             <div class="info_wrap">
                                 <div class="info_header">
-                                    <p><i class="far fa-heart"></i>1066</p>
-                                    <p><i class="far fa-comment"></i>80</p>
+                                    <p class="likes"><i class="far fa-heart"></i>1066</p>
+                                    <p class="comments"><i class="far fa-comment"></i>80</p>
                                 </div>
                                 <div class="info_body">
                                     <p>
-                                        Повседневная практика показывает, что дальнейшее развитие различных форм...
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo itaque iusto minima odit praesentium, quibusdam sint vitae! Et, reiciendis?
                                     </p>
                                 </div>
                                 <div class="info_footer">
@@ -340,12 +366,12 @@
                         <a href="#" class="info">
                             <div class="info_wrap">
                                 <div class="info_header">
-                                    <p><i class="far fa-heart"></i>1066</p>
-                                    <p><i class="far fa-comment"></i>80</p>
+                                    <p class="likes"><i class="far fa-heart"></i>1066</p>
+                                    <p class="comments"><i class="far fa-comment"></i>80</p>
                                 </div>
                                 <div class="info_body">
                                     <p>
-                                        Повседневная практика показывает, что дальнейшее развитие различных форм...
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo itaque iusto minima odit praesentium, quibusdam sint vitae! Et, reiciendis?
                                     </p>
                                 </div>
                                 <div class="info_footer">
@@ -361,12 +387,12 @@
                         <a href="#" class="info">
                             <div class="info_wrap">
                                 <div class="info_header">
-                                    <p><i class="far fa-heart"></i>1066</p>
-                                    <p><i class="far fa-comment"></i>80</p>
+                                    <p class="likes"><i class="far fa-heart"></i>1066</p>
+                                    <p class="comments"><i class="far fa-comment"></i>80</p>
                                 </div>
                                 <div class="info_body">
                                     <p>
-                                        Повседневная практика показывает, что дальнейшее развитие различных форм...
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo itaque iusto minima odit praesentium, quibusdam sint vitae! Et, reiciendis?
                                     </p>
                                 </div>
                                 <div class="info_footer">
@@ -382,12 +408,12 @@
                         <a href="#" class="info">
                             <div class="info_wrap">
                                 <div class="info_header">
-                                    <p><i class="far fa-heart"></i>1066</p>
-                                    <p><i class="far fa-comment"></i>80</p>
+                                    <p class="likes"><i class="far fa-heart"></i>1066</p>
+                                    <p class="comments"><i class="far fa-comment"></i>80</p>
                                 </div>
                                 <div class="info_body">
                                     <p>
-                                        Повседневная практика показывает, что дальнейшее развитие различных форм...
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo itaque iusto minima odit praesentium, quibusdam sint vitae! Et, reiciendis?
                                     </p>
                                 </div>
                                 <div class="info_footer">
@@ -403,12 +429,12 @@
                         <a href="#" class="info">
                             <div class="info_wrap">
                                 <div class="info_header">
-                                    <p><i class="far fa-heart"></i>1066</p>
-                                    <p><i class="far fa-comment"></i>80</p>
+                                    <p class="likes"><i class="far fa-heart"></i>1066</p>
+                                    <p class="comments"><i class="far fa-comment"></i>80</p>
                                 </div>
                                 <div class="info_body">
                                     <p>
-                                        Повседневная практика показывает, что дальнейшее развитие различных форм...
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo itaque iusto minima odit praesentium, quibusdam sint vitae! Et, reiciendis?
                                     </p>
                                 </div>
                                 <div class="info_footer">
@@ -432,16 +458,27 @@
                     </div>
                     <div class="contact_section_header_info">
                         <div class="phone">
-                            <p class="text">Телефон:</p>
+                            <p class="text"><span class="desktop">Телефон:</span><span class="mobile mobile_phone"><i class="fas fa-phone"></i></span></p>
                             <p>+38 063 48 099 68</p>
                         </div>
                         <div class="email">
-                            <p class="text">E-mail:</p>
+                            <p class="text"><span class="desktop">E-mail:</span><span class="mobile"><i class="fas fa-envelope"></i></span></p>
                             <p>clevebox.ua@gmail.com</p>
                         </div>
                         <div class="social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#">
+                                <p class="d-flex align-items-center justify-content-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </p>
+                                <span class="mobile">Facebook</span>
+                            </a>
+                            <a href="#">
+                                <p class="d-flex align-items-center justify-content-center">
+                                    <i class="fab fa-instagram"></i>
+                                </p>
+                                <span class="mobile">Instagtam</span>
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -450,6 +487,7 @@
             <div class="contact_section_body container-fluid">
                 <div class="container form_container">
                     <form>
+                        <h3 class="form_header">Напишите нам</h3>
                         <div class="form-group user_info">
                             <div class="input-group">
                                 <input type="text" class="form-control user_name_input" id="userName" placeholder="Ваше имя*" required>
@@ -462,8 +500,11 @@
                             </div>
                         </div>
                         <div class="form-group user_msg ">
-                            <lable for="msg">Сообщение:</lable>
+                            <label for="msg">Сообщение:</label>
                             <textarea name="msg" id="msg" class="message" ></textarea>
+                        </div>
+                        <div class="form-group mt-1 form_info">
+                            <p>* обязательные поля ввода</p>
                         </div>
                         <div class="form-group d-flex justify-content-center">
                             <button class="btn form_submit" type="submit">Отправить</button>
@@ -481,21 +522,36 @@
 
         </div>
 
-        <div class="modal fade container" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+        <div class="modal fade container videoModal small_video" id="small_video" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <iframe  src="https://www.youtube.com/embed/JkIPgaIXDFs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="modal_video_block">
+                        <iframe  src="https://www.youtube.com/embed/JkIPgaIXDFs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="modal fade container videoModal big_video" id="big_video" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal_video_block">
+                        <iframe  src="https://www.youtube.com/embed/JkIPgaIXDFs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="container-fluid footer">
         <div class="container">
             <p><a href="#">Cleverbox. &copy</a></p>
-            <p> <a href="#">Разработка сайта Delfin Studio. &copy</a>  </p>
+            <p class="desktop"> <a href="#">Разработка сайта Delfin Studio. &copy</a>  </p>
         </div>
     </div>
 

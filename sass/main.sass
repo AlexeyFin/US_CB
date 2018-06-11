@@ -1,3 +1,4 @@
+
 @import "colors"
 
 html
@@ -6,23 +7,23 @@ html
   margin: 0
 .main
   padding: 0
-
 .header
   border-bottom: 1px solid $border-color
   .container
     padding: 0
+  .navbar-collapse
+    margin-left: 40px
   .top-nav-menu
-    margin-bottom: 0
-    display: flex
-    justify-content: space-between
+    margin: .5rem 3rem 0 .25rem
+
     li
       list-style-type: none
-      margin-right: 15px
+      margin-right: 10px
       a
         font-family: 'Comfortaa', cursive
         text-decoration: none
         color: #6a6a6a
-        font-size: 16px
+        font-size: 14px
         letter-spacing: 0.74px
   .basket-block
     width: 210px
@@ -32,22 +33,63 @@ html
     display: flex
     justify-content: space-around
     align-items: center
-    p
-      margin-bottom: 0
-      color: $active
-      font-size: 16px
+    .item
+      display: flex
+      justify-content: space-between
+      p
+        margin-bottom: 0
+        margin-left: 10px
+        color: $active
+        font-size: 16px
+    .basket-logo
+      display: none
+  .navbar-toggler-icon
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+    .toggler-icon
+      width: 30px
+      min-height: 3px
+      margin-bottom: 10px
+      background-color: #7b7b7b
+    .first
+      background-color: $active
+      width: 40px
+
 
 .products_section
   font-family: "Comfortaa", cursive
   margin-top: 40px
   background-color: $body-bg
   margin-bottom: 80px
+  .product_wrap
+    padding: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-width: 45%
   .product
-    margin: 15px
+    margin-bottom: 15px
     position: relative
     transition: all 0.3s ease-in-out
+    overflow: hidden
+    .mobile_img
+      display: none
     img
       width: 100%
+
+      transition: all .3s ease-in-out
+    .background
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: rgb(94, 210, 179)
+      opacity: 0
+      transition: all 0.3s ease-in-out
+      z-index: 5
     .product_info
       width: 100%
       height: 100%
@@ -57,6 +99,7 @@ html
       padding-top: 10%
       padding-left: 8%
       transition: all .3s ease-in-out
+      z-index: 10
       h3
         font-size: 34px
         letter-spacing: 1.58px
@@ -78,15 +121,19 @@ html
         box-shadow: none
         outline: none
         transition: all .3s ease-in-out
+      .about
+        display: none
         &:hover
           transform: scale(1.1, 1.1)
           font-size: 20px
     .product_video_info
       position: absolute
+      top: 0
+      left: 0
       .btn_container
         position: absolute
-        top: 50%
-        right: 58%
+        top: calc(50% - 46px)
+        right: calc(50% - 46px)
         button
           width: 93px
           height: 93px
@@ -102,10 +149,16 @@ html
       button
         opacity: 1
         font-size: 32px
+
   .product:hover
     box-shadow: 1px 1px #53ea93,2px 2px #53ea93,3px 3px #53ea93,4px 4px #53ea93,5px 5px #53ea93,6px 6px #53ea93,7px 7px #53ea93
     -webkit-transform: translateX(-7px)
     transform: translateX(-7px)
+    .background
+      opacity: .32
+    .desktop_img
+      transform: scale(1.3, 1.3)
+
 .about_us_section
   width: 100%
   &_header
@@ -159,10 +212,56 @@ html
       color: #4e4e4e
       letter-spacing: 1.76px
   &_body
-    margin-top: 80px
-    iframe
+    position: relative
+    img
       width: 100%
-      height: 485px
+    .info_block
+      position: absolute
+      height: 100%
+      top: 12%
+      left: 6%
+      p
+        font-size: 16px
+        letter-spacing: .74px
+        color: #4b4b4b
+      h4
+        font-size: 34px
+        letter-spacing: 1.58px
+        font-weight: 700
+        color: #4a4a4a
+      a
+        text-decoration: none
+        color: #4b4b4b
+        text-transform: uppercase
+        font-weight: 700
+        font-size: 14px
+        letter-spacing: 0.65px
+        &::after
+          display: block
+          content: ''
+          height: 1px
+          background-color: #4b4b4b
+          width: 60px
+          transform: translate(120%, -12px)
+    .play_block
+      position: absolute
+      top: calc(50% - 46px)
+      left: calc(50% - 46px)
+      button
+        width: 93px
+        height: 93px
+        border-radius: 50%
+        background-color: #ffffff
+        color: $active
+        transition: all 0.3s ease-in-out
+        opacity: 0
+        font-size: 22px
+        box-shadow: none
+    &:hover
+      .play_block
+        button
+          opacity: 1
+
 .instagram_section
   margin-top: 80px
   margin-bottom: 80px
@@ -229,11 +328,18 @@ html
           align-items: center
           font-size: 17px
           .info_header
+            margin-top: 8px
             display: flex
             width: 60%
             justify-content: space-around
           .info_body
             text-align: center
+            p
+              overflow: hidden
+              text-overflow: ellipsis
+              white-space: nowrap
+              width: 180px
+              display: block
           .info_footer
             text-decoration: underline
             font-size: 21px
@@ -273,6 +379,8 @@ html
       display: flex
       flex-direction: column
       align-items: center
+      .mobile
+        display: none
       .phone, .email, .social
         display: flex
       .text
@@ -284,6 +392,8 @@ html
       .social
         margin-top: 20px
         a
+          text-decoration: none
+        p
           margin-left: 15px
           width: 60px
           height: 60px
@@ -298,7 +408,7 @@ html
             color: #ffffff
             font-size: 34px
             transition: all 0.5s ease-in-out
-        a:hover
+        p:hover
           background-color: #ffffff
           i
             color: $active
@@ -306,6 +416,7 @@ html
   .contact_section_body
     display: flex
     justify-content: center
+
     .form_container
       padding: 0
       margin: 0
@@ -316,6 +427,8 @@ html
         margin-top: 80px
         width: 100%
         margin-bottom: 80px
+        .form_header
+          display: none
         .user_info
           width: 100%
           display: flex
@@ -337,7 +450,7 @@ html
           display: flex
           flex-direction: column
           padding: 5px
-          lable
+          label
             color: #7b7b7b
             font-size: 21px
             padding-left: 20px
@@ -360,9 +473,15 @@ html
           letter-spacing: 0.74px
           transition: all 0.3s ease-in-out
         .form_submit:hover
-          transform: scale(1.2, 1.2)
-          font-size: 22px
+          border: 3px solid $active
+          background-color: #ffffff
+          color: $active
 
+        .form_info
+          p
+            font-size: 16px
+            color: #d3d3d3
+            letter-spacing: .74px
   .toTopContainer
     position: relative
     .toTop
@@ -374,7 +493,7 @@ html
       bottom: 30px
       transform: scale(1.2, 1.2)
 
-#videoModal
+.videoModal
   font-family: "Comfortaa", cursive
   .modal-dialog
     margin-right: 0
@@ -384,15 +503,21 @@ html
     min-width: 900px
     max-width: 1000px
     background-color: rgba(255, 255,255, 0)
-    iframe
+    border: none
+    padding-left: 80px
+    .modal_video_block
       width: 100%
-      height: 550px
+      height: 450px
+      iframe
+        width: 100%
+        height: 100%
+        margin-left: 80px
     .close
       width: 60px
       height: 60px
       position: absolute
-      right: -10%
-      top: 0
+      right: -15%
+      top: -8%
       font-size: 80px
       color: $active
 
@@ -409,3 +534,210 @@ html
       color: inherit
       text-decoration: none
 
+
+@media (max-width: 420px)
+  .header
+    padding: 0
+    border: none
+    .container
+      .navbar
+        padding-left: 0
+        padding-right: 0
+        .navbar-brand
+          margin-left: 15px
+        .navbar-collapse
+          margin: 0
+
+      .top-nav-menu
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin: 30px 0 60px 0
+
+        li
+          a
+            font-size: 24px
+            line-height: 60px
+            font-weight: 700
+            letter-spacing: 1.11px
+      .basket-block
+        width: 100%
+        min-height: 140px
+        border: none
+        border-top: 3px solid $active
+        border-bottom: 3px solid $active
+        border-radius: 0
+        .basket-logo
+          width: 75px
+          height: 75px
+          border-radius: 50%
+          background-color: $active
+          color: #ffffff
+          display: flex
+          justify-content: center
+          align-items: center
+          font-size: 32px
+        .basket-img
+          transform: scale(1.2, 1.2)
+        .item
+          flex-direction: column
+          align-items: center
+          p
+            font-size: 24px
+            letter-spacing: 1.11px
+  .about_us_section, .instagram_section, .video_section, .toTopContainer
+    display: none
+  .products_section
+    background-color: #ffffff
+    margin-top: 5px
+    padding: 0
+    .product_video
+      display: none !important
+    .product
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
+      &:hover
+        box-shadow: none
+        transform: none
+      .mobile_img
+        display: block
+      .desktop_img
+        display: none
+      .product_info
+        position: relative
+        padding: 35px 40px
+        background-color: #ffffff
+        margin-top: -15%
+        width: 87.5%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        .about
+          display: block
+          margin-top: 15px
+          text-align: center
+          color: #525252
+          font-size: 14px
+          letter-spacing: 0.74px
+
+        .desktop_p
+          display: none
+        h3
+          color: #424242
+          font-size: 32px
+          letter-spacing: 1.58px
+          margin-top: 10px
+        .btn
+          width: 100%
+          height: 40px
+          border-radius: 5px
+          background-color: $active
+          color: #ffffff
+          font-size: 18px
+          letter-spacing: 0.74px
+          margin-top: 20px
+
+  .contact_section
+    background-color: #ffffff
+    .left, .right
+      display: none
+    .contact_section_header
+      background-color: #ffffff
+      padding: 0
+    .contact_section_header_main
+      padding: 0
+      display: flex
+      flex-direction: column
+      justify-content: center
+      h2
+        font-size: 29px
+        letter-spacing: 1.76px
+        border-bottom: 1px solid $active
+        text-align: center
+        margin: 0
+    .contact_section_header_info
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      p
+        font-size: 20px
+        color: #4e4e4e
+        letter-spacing: 0.93px
+        display: flex
+        align-items: center
+      .desktop
+        display: none
+      .mobile
+        width: 42px
+        height: 42px
+        border-radius: 50%
+        background-color: $active
+        color: #ffffff
+        font-size: 22px
+        display: flex
+        align-items: center
+        justify-content: center
+      .mobile_phone
+        transform: rotate(110deg)
+      .social
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin-top: 0
+        a
+          margin-bottom: 16px
+          display: flex
+          align-items: center
+          p
+            margin: 0
+            width: 42px
+            height: 42px
+            font-size: 18px
+          .mobile
+            background-color: #ffffff
+            border-radius: 0
+            border: none
+            color: $active
+            display: block
+            margin-left: 20px
+            font-size: 20px
+            text-decoration: underline
+            letter-spacing: 0.93px
+    .contact_section_body
+      .form_container
+        form
+          display: flex
+          flex-direction: column
+          margin-top: 0
+          margin-bottom: 40px
+        .form_header
+          display: block !important
+          color: #4e4e4e
+          font-size: 29px
+          letter-spacing: 1.76px
+          margin-bottom: 20px
+          margin-top: 50px
+        .user_info
+          flex-direction: column
+          align-items: center
+          margin-bottom: 10px !important
+          .input-group
+            min-width: 100%
+        .user_msg
+          label
+            padding-left: 3px !important
+  .footer
+    padding-top: 0
+    background-color: #3b937c
+    .container
+      border: none
+      p
+        font-size: 20px
+        letter-spacing: 0.93px
+        color: #ffffff
+      .desktop
+        display: none
