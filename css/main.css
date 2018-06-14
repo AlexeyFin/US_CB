@@ -90,7 +90,8 @@ html {
 
 .products_section {
   font-family: "Comfortaa", cursive;
-  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   background-color: #f9f9f9;
   margin-bottom: 80px;
 }
@@ -283,9 +284,10 @@ html {
 .video_section {
   background-color: #f9f9f9;
   font-family: "Comfortaa", cursive;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 .video_section_header {
-  padding-top: 40px;
   margin-bottom: 60px;
 }
 .video_section_header h2 {
